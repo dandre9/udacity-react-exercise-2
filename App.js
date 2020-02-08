@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import ListOfPopularity from './ListOfPopularity'
 import './App.css';
 
 /*
@@ -106,6 +107,9 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
+          {Object.keys(movies).map(movieKey => (
+              <ListOfPopularity profiles={profiles} users={users} movies={movies} movieKey={movieKey} />
+          ))}
       </div>
     );
   }
